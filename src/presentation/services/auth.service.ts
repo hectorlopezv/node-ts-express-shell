@@ -1,10 +1,11 @@
 import { bcryptAdapter } from "../../config/bcrypt.adapter";
 import { envs } from "../../config/envs";
 import { JwtAdapter } from "../../config/jsonweb.adapter";
-import { UserModel } from "../../data/mongo/models/user.model";
+import { UserModel } from "../../data/mongo/models/user/user.model";
 import { LoginUserDto } from "../../domain/dtos/auth/login-user.dto";
 import { RegisterUserDto } from "../../domain/dtos/auth/register-user.dto";
-import { UserEntity } from "../../domain/entities/user.entity";
+import { UserEntity } from "../../domain/entities/user/user.entity";
+
 import { CustomError } from "../../domain/erros/custom.error";
 import { EmailService } from "./email.service";
 

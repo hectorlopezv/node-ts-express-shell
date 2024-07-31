@@ -12,14 +12,14 @@ export class JwtAdapter {
             });
         });
     }
-    static validateToken(token: string){
+    static validateToken<T>(token: string): Promise<T | null> {
         return new Promise((resolve, reject)=>{
             jwt.verify(token, envs.JWT_SECRET, (err, decoded)=>{
                 if(err){
-                    return resolve(err);
+                    return resolve(null);
                 }
 
-                resolve(decoded);
+                resolve(decoded as T);
             });
         });
     }
