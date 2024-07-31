@@ -1,7 +1,6 @@
 import { CategoryModel } from "../../data/mongo/models/category/category.model";
 import { CreateCategoryDto } from "../../domain/dtos/category/create-category.dto";
 import { PaginationDto } from "../../domain/dtos/shared/pagination.dto";
-import { CategoryEntity } from "../../domain/entities/category/category.entity";
 import { UserEntity } from "../../domain/entities/user/user.entity";
 import { CustomError } from "../../domain/erros/custom.error";
 
