@@ -16,7 +16,7 @@ export class RegisterUserDto {
         if(!password){
             return ["Password is required", undefined];
         }
-        if(regularExps.email.test(email)){
+        if(!regularExps.email.test(email)){
             return ["Invalid email", undefined];
         }
         return [undefined, new RegisterUserDto(name, email, password)];
