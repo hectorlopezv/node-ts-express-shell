@@ -12,5 +12,15 @@ export class JwtAdapter {
             });
         });
     }
-    static validateToken(token: string){}
+    static validateToken(token: string){
+        return new Promise((resolve, reject)=>{
+            jwt.verify(token, envs.JWT_SECRET, (err, decoded)=>{
+                if(err){
+                    return resolve(err);
+                }
+
+                resolve(decoded);
+            });
+        });
+    }
 }
